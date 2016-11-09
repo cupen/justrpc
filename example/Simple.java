@@ -1,4 +1,6 @@
+import java.io.IOException;
 import java.net.UnknownHostException;
+import java.util.concurrent.TimeoutException;
 
 import justrpc.rpc.RPCClient;
 import justrpc.rpc.RPCServer;
@@ -20,4 +22,5 @@ public class Simple extends Thread {
 		}
 		
 	}
+	
 }
