@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+ 
+sourceCompatibility =1.6
+version = '0.1.0'
+
+repositories {
+    // jcenter()
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/']
+        }
+        
+        // resources {
+        //    srcDirs = ['src/resources']
+        //}
+        
+    }
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+	compile 'com.typesafe.akka:akka-actor_2.11:2.4.12'
+    compile 'com.typesafe.akka:akka-slf4j_2.11:2.4.12'
+	compile 'org.msgpack:msgpack-core:0.8.11'
+    
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: "application"
+mainClassName = System.getProperty("mainClass")
